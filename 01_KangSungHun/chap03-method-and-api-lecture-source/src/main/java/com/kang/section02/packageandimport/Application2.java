@@ -1,5 +1,8 @@
 package com.kang.section02.packageandimport;
 
+// 컴파일 시
+import  java.lang.*;
+
 import com.kang.section01.method.Calculator;
 
 public class Application2 {

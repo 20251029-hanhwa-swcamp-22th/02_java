@@ -3,13 +3,9 @@ package com.kang.section6.ternary;
 public class Application1 {
   public static void main(String[] args) {
 
-    /* 삼항 연산자
+    /* 삼항 연산자 :
+    조건식 ? true인 경우 : false인 경우 ; */
 
-       조건식 ? true인 경우 : false인 경우 ;
-
-
-
-     */
 
     int num1 = 10;
     int num2 = -10;
