@@ -1,4 +1,4 @@
-package section02.packageandimport;
+package org.ho.section02.packageandimport;
 import java.util.ArrayList;
 // [import]
 // - 외부 클래스를 가지고 와서 배치

@@ -1,4 +1,4 @@
-package section02.packageandimport;
+package org.ho.section02.packageandimport;
 
 public class Application1 {
   public static void main(String[] args) {
