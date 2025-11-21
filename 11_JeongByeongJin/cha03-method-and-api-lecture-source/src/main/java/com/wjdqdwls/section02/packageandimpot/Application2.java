@@ -5,6 +5,8 @@ package com.wjdqdwls.section02.packageandimpot;
 // 이후 현재 클래스에서 사용 시 클래스명만 작성하면 된다!
 import java.lang.*;
 import com.wjdqdwls.section01.method.Calculator;
+import com.wjdqdwls.section01.method.Calculator;
+
 public class Application2 {
 
 
