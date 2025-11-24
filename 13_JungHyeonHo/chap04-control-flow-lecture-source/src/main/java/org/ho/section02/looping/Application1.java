@@ -11,6 +11,9 @@ public class Application1 {
     B_nestedFor b_nestedFor = new B_nestedFor();
 //    b_nestedFor.printTable();
 //    b_nestedFor.printDan();
-    b_nestedFor.printTriangleStar();
+//    b_nestedFor.printTriangleStar();
+    C_while c_while = new C_while();
+//    c_while.testSimpleWhileStatement();
+    c_while.testWhileExample1();
   }
 }
