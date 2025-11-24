@@ -9,5 +9,12 @@ public class Application1 {
      * 단, 1~10 사이의 정수가 아닌 경우 "반드시 1~10 사이의 정수를 입력해야 합니다." 를 출력하세요.
      * */
     Scanner sc = new Scanner(System.in);
+    int i = sc.nextInt();
+    if (i < 1 || i > 10) System.out.println("반드시 1~10 사이의 정수를 입력해야 합니다.");
+    else {
+      if (i % 2 == 1) System.out.println("홀수다.");
+      else System.out.println("짝수다.");
+    }
+
   }
 }
