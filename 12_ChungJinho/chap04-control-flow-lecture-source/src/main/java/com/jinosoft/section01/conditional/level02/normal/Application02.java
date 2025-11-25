@@ -14,8 +14,8 @@ public class Application02 {
      * 계산 예시) BMI = 67 / (1.7 * 1.7)
      * */
 
-    double weight = 67.0;
-    double height = 1.7;
+    double weight = 82.0;
+    double height = 1.76;
 
     double bmi = weight / (height * height);
 
