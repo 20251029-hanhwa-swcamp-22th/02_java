@@ -49,3 +49,4 @@ public class Application02 {
     System.out.println(fruit + "의 가격은 " + price + "원 입니다.");
   }
 }
+
