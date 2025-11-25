@@ -24,28 +24,28 @@ public class Application01 {
     System.out.print("두 번째 정수 : ");
     int second = sc.nextInt();
     System.out.print("연산 기호를 입력하세요 : ");
-    char op = sc.next().charAt(0);
+    String op = sc.nextLine();
 
     int result = 0;
 
     switch (op) {
-      case '+':
+      case "+":
         result = first + second;
         System.out.println(first + " " + op + " " + second + " = " + result);
         break;
-      case '-':
+      case "-":
         result = first - second;
         System.out.println(first + " " + op + " " + second + " = " + result);
         break;
-      case '*':
+      case "*":
         result = first * second;
         System.out.println(first + " " + op + " " + second + " = " + result);
         break;
-      case '/':
+      case "/":
         result = first / second;
         System.out.println(first + " " + op + " " + second + " = " + result);
         break;
-      case '%':
+      case "%":
         result = first % second;
         System.out.println(first + " " + op + " " + second + " = " + result);
         break;

@@ -37,28 +37,28 @@ public class Application01 {
     System.out.print("숫자를 입력하세요 : ");
     int num = sc.nextInt();
 
-    StringBuilder result = new StringBuilder();
+    String result = "";
 
     for (int i = 0; i < str.length(); i++) {
       char ch = str.charAt(i);
 
       if (ch == ' ') {
-        result.append(ch);
+        result += ch;
       } else {
         if (ch >= 'a' && ch <= 'z') {
           char temp = (char) (ch + num % 26);
           if (temp > 'z') {
             temp -= 26;
           }
-          result.append(temp);
+          result += temp;
         } else if (ch >= 'A' && ch <= 'Z') {
           char temp = (char) (ch + num % 26);
           if (temp > 'Z') {
             temp -= 26;
           }
-          result.append(temp);
+          result += temp;
         } else {
-          result.append(ch);
+          result += ch;
         }
       }
     }
