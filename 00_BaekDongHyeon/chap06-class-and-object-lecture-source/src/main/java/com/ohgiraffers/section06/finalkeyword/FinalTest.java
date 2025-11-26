@@ -8,6 +8,7 @@ public class FinalTest {
     - 매개 변수 : 호출 시 전달한 값 변경 불가
     - 인스턴스 변수 : 인스턴스 생성 초기화 이후에 값 변경 불가
     - 클래스 변수(static) : 프로그램 시작 이후 값 변경 불가
+
     - non-static method : 메소드 재작성(오버라이딩) 불가
     - static method : 메소드 재작성(오버라이딩) 불가
     - 클래스 : 상속 불가
