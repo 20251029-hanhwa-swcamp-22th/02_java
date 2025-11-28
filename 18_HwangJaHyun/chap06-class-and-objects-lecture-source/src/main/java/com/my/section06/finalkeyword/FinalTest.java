@@ -10,7 +10,7 @@ public class FinalTest {
    * 4. 클래스 변수(static) : 프로그램 시작 이후 값 변경 불가
    * 5. non-static method : 메소드 재작성(오버라이딩) 불가
    * 6. static method : 메소드 재작성(오버라이딩) 불가
-   * 7. 클래스 : 상속 불가
+   * 7. final 클래스 : 상속 불가
    * */
   /* 현재 클래스를 이용해서 인스턴스를 만들었을 때
   * NON_STATIC_NUM 이 같이 할당 됨 */

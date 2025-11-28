@@ -2,6 +2,7 @@ package com.my.section02.encapsulation.problem1;
 
 public class Monster {
   String name;
+  //private
   int hp;
 
   public void setHp(int hp) {
