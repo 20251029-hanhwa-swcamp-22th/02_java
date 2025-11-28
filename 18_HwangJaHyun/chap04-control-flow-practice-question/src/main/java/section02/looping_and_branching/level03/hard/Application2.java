@@ -27,6 +27,16 @@ public class Application2 { // while, , do - while
      * 정답입니다. 3회만에 정답을 맞추셨습니다.
      * */
 
+    Random rand = new Random();
+    int num = rand.nextInt(100) + 1;
+
+
+    Scanner sc = new Scanner(System.in);
+    System.out.println("정수를 입력하세요 : ");
+    int a = sc.nextInt();
+
+    System.out.println("입력하신 정수보다 작습니다.");
+    System.out.println("정답입니다.");
   }
 
 }

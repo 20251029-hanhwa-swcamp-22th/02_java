@@ -1,4 +1,4 @@
-package section_01.usertype;
+package com.my.section01.usertype;
 
 import java.util.Arrays;
 

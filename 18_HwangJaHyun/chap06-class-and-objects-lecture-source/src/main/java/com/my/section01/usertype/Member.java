@@ -1,4 +1,4 @@
-package section_01.usertype;
+package com.my.section01.usertype;
 
 public class Member {
   /* 클래스 : 객체의 속성과 기능을 정의하는 문서
