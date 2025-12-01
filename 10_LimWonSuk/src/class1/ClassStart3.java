@@ -3,7 +3,7 @@ package class1;
 public class ClassStart3 {
 
     public static void main(String[] args) {
-        Student student1;
+        Student stude9*nt1;
         student1 = new Student(); //x001
         student1.name = "학생1";
         student1.age = 15;
