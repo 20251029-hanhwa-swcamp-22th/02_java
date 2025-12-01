@@ -6,18 +6,18 @@ import java.io.IOException;
 import java.util.Arrays;
 
 public class Application1 {
-  public static void main(String[] args){
+  public static void main(String[] args) {
 /*
 1. FileInputStream
   - File을 읽어오는 바이트 기반 스트림
   - 1byte 단위로 읽어옴
 */
     FileInputStream fis = null;
-    try{
+    try {
       // 지정된 파일의 내용을 바이트 단위로 읽어올 스트림 연결
       fis = new FileInputStream("testInputStream.txt");
 
-// 1) 1byte씩 읽어오기
+//// 1) 1byte씩 읽어오기
 //      int value = 0;
 //      while((value=fis.read())!=-1){
 //        System.out.print((char)value);
@@ -30,16 +30,14 @@ public class Application1 {
       fis.read(barr);
 
       System.out.println(Arrays.toString(barr));
-        // 음수가 나오는 이유는 글자가 깨졌다는 의미
-        // 0은 빈칸이라는 의미
+      // 음수가 나오는 이유는 글자가 깨졌다는 의미
+      // 0은 빈칸이라는 의미
       String result = new String(barr); // 바이트 배열 저장 값으로 문자열 생성
       System.out.println(result);
 
-    }
-    catch(IOException e ){
+    } catch (IOException e) {
       e.printStackTrace();
-    }
-    finally{
+    } finally {
       try {
         /* 자원 반납을 해야 하는 이유
          *  1. 장기간 실행중인 프로그램에서 스트림을 닫지 않는 경우 다양한 리소스에서 누수(leak)가 발생한다.
