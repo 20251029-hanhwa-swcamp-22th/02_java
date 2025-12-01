@@ -1,11 +1,8 @@
 package com.ohgiraffers.section02.stream;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
-public class Application1 {
+public class Application1 implements Serializable{
     public static void main(String[] args) {
 
         /*1. FileInputStream
