@@ -37,7 +37,7 @@ public class Application1 {
       e.printStackTrace();
 
     }finally{
-      
+
       try {
         /* 자원(스트림) 반납이 필수적인 이유?
          * 1. 장기간 실행 중인 프로그램에서 스트림을 닫지 않으면 누수(leak)가 발생한다.
