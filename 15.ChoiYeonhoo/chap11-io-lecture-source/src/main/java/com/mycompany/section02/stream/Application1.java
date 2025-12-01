@@ -1,5 +1,7 @@
-package com.kth.section02.stream;
+package com.mycompany.section02.stream;
 
+import javax.imageio.IIOException;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -10,34 +12,36 @@ public class Application1 {
 
     /* 1. FileInputStream
     * - File을 읽어오는 바이트 기반 스트림
-    * - 1byte 단위로 읽어옴
+    * - 1byte 단위로 읽어옮
     * */
 
     FileInputStream fis = null;
-
     try{
       // 지정된 파일의 내용을 바이트 단위로 읽어올 스트림 연결
       fis = new FileInputStream("testInputStream.txt");
 
-      // 1) 1byte씩 읽어오기
+//      // 1) 1byte 씩 읽어오기
 //      int value = 0;
-//      while( (value = fis.read()) != -1 ){
-//        System.out.println((char)value);
+//      while( (value = fis.read()) != -1){
+//        System.out.print((char)value);
 //      }
 
       // 2) byte 배열로 읽어오기
-      byte[] barr = new byte[100];
-      fis.read(barr);
+      byte[] bArr = new byte[100];
+      fis.read(bArr);
+      System.out.println(Arrays.toString(bArr));
 
-      System.out.println(Arrays.toString(barr));
-      String result = new String(barr); // 바이트 배열 저장 값으로 문자열 생성
+      String result = new String(bArr); // 바이트 배열 저장 값으로 문자열 생성
       System.out.println(result);
 
-    }catch(IOException e){
+    }
+    catch (FileNotFoundException e){
       e.printStackTrace();
-
-    }finally{
-
+    }
+    catch (IOException e){
+      e.printStackTrace();
+    }
+    finally {
       try {
         /* 자원(스트림) 반납이 필수적인 이유?
          * 1. 장기간 실행 중인 프로그램에서 스트림을 닫지 않으면 누수(leak)가 발생한다.
@@ -48,7 +52,5 @@ public class Application1 {
         throw new RuntimeException(e);
       }
     }
-
-
   }
 }
