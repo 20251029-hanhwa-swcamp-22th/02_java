@@ -59,10 +59,6 @@ public class Application4 {
     for(String s : sarr) {
       System.out.println(s);
     }
-    System.out.println("얼마나 더 노력해야");
-    System.out.println("현지가 나를 바라봐줄까");
-    System.out.println("바라만 봐도 설레고");
-    System.out.println("너무 좋다..//");
     for (String s : sarr1) {
       System.out.println(s);
     }
