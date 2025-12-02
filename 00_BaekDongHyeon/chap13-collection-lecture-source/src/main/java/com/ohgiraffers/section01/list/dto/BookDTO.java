@@ -17,6 +17,16 @@ public class BookDTO implements Comparable<BookDTO> {
     this.price = price;
   }
 
+  /* 객체 복사 생성자 */
+  public BookDTO(BookDTO other){
+    this.number = other.number;
+    this.title = other.title;
+    this.author = other.author;
+    this.price = other.price;
+  }
+
+
+
   public int getNumber() {
     return number;
   }
@@ -64,8 +74,6 @@ public class BookDTO implements Comparable<BookDTO> {
   * - 같은 인스턴스 끼리의 기본 비교 방법을 정의하는
   *   compareTo() 메서드 제공 인터페이스
   * */
-
-
   @Override
   public int compareTo(BookDTO o) {
     // 가격 순서
