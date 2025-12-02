@@ -1,6 +1,6 @@
-package com.mycompany.section01.list.dto;
+package com.mycompany.section03.list.dto;
 
-public class BookDTO implements Comparable<BookDTO>{
+public class BookDTO implements Comparable<BookDTO> {
 
   /* 도서 정보를 저장할 DTO 클래스를 만들어보자 */
   private int number;
@@ -69,9 +69,9 @@ public class BookDTO implements Comparable<BookDTO>{
   }
 
   /* Comparable<T> 인터페이스
-  * - 같은 인스턴스 끼리의 기본 비교 방법을 정의하는
-  *   compareTo() 메서드 제공 인터페이스*/
-  
+   * - 같은 인스턴스 끼리의 기본 비교 방법을 정의하는
+   *   compareTo() 메서드 제공 인터페이스*/
+
   // 가격 순서
   @Override
   public int compareTo(BookDTO o) {

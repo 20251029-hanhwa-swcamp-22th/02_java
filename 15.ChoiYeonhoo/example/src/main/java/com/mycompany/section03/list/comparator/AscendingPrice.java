@@ -1,6 +1,6 @@
-package com.mycompany.section01.list.comparator;
+package com.mycompany.section03.list.comparator;
 
-import com.mycompany.section01.list.dto.BookDTO;
+import com.mycompany.section03.list.dto.BookDTO;
 
 import java.util.Comparator;
 
