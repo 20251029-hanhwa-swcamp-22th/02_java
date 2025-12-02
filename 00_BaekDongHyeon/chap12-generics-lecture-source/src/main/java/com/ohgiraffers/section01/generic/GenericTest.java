@@ -18,5 +18,4 @@ public class GenericTest<T> {
   public T getValue(){
     return value;
   }
-
 }
