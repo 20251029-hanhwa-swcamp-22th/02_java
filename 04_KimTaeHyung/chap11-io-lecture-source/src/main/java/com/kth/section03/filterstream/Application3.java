@@ -31,6 +31,8 @@ public class Application3 {
 
 
     /* DataOutputStream으로 출력한 데이터 입력 받기 */
+    // new 연산자를 이용해 기반 스트림인 FileInputStream의 인스턴스를 먼저 생성 후, 보조스트림인 DataInputStream의 생성자로 전달하여,
+    // 최종적으로 dis라는 인스턴스를 초기화한다.
     try(DataInputStream dis = new DataInputStream(new FileInputStream("score.txt"))){
 
       while(true){
