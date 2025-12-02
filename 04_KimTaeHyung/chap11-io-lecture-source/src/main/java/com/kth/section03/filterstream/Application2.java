@@ -18,6 +18,8 @@ public class Application2 {
     * - 자바에서 콘솔 출력, 키보드 입력을 위한 기본 스트림
     * */
     try(
+        // new 연산자와 생성자를 중첩 호출하여, 키보드 System.in 기반 스트림을 문자 단위로 읽는 InputStreamReader 보조스트림으로 변환한 뒤
+        // 다시 BufferedReader으로 연결하여 br 인스턴스를 초기화한다.
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     ){
       System.out.print("문자열 입력 : ");

@@ -12,6 +12,7 @@ public class Application5 {
 
       // 읽어온 Object -> Member[] 다운 캐스팅
       // + 직렬화된 데이터를 원래 객체 상태로 바꿈 (역직렬화)
+      // 직렬화된 바이트 스트림 ois로부터 Member 객체 배열을 읽어와서 inputMembers 변수에 할당
       Member[] inputMembers = (Member[])ois.readObject();
 
       for(Member mem : inputMembers){
