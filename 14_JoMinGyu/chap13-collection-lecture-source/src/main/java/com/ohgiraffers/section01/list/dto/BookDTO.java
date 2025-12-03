@@ -16,6 +16,14 @@ public class BookDTO implements Comparable<BookDTO> {
     this.price = price;
   }
 
+  /* 객체 복사 생성자 */
+  public BookDTO(BookDTO other){
+    this.number = other.number;
+    this.title = other.title;
+    this.author = other.author;
+    this.price = other.price;
+  }
+
   public int getNumber() {
     return number;
   }
@@ -46,6 +54,16 @@ public class BookDTO implements Comparable<BookDTO> {
 
   public void setPrice(int price) {
     this.price = price;
+  }
+
+  @Override
+  public String toString() {
+    return "BookDTO{" +
+        "number=" + number +
+        ", title=" + title +
+        ", author=" + author +
+        ", price=" + price +
+        '}';
   }
 
   /* Comparable<T> 인터페이스
