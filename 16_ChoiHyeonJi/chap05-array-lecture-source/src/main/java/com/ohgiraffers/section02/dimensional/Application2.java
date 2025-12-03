@@ -26,7 +26,5 @@ public class Application2 {
       }
       System.out.println(); //줄바꿈
     }
-
-
   }
 }
