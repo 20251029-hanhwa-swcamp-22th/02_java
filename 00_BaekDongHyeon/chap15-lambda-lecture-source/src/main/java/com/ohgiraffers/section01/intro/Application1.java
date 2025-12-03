@@ -25,13 +25,15 @@ public class Application1 {
 
     /* 3. 익명 내부 클래스 방식을 람다식으로 바꿔서 사용하는 방법 */
     //Calculator c3 =  (a, b) -> { return a + b; };
-    Calculator c3 =  (a, b) -> a + b;
+    Calculator c3 = (a, b) -> a + b;
 
     System.out.println(c3.sumTwoNumber(40,50));
 
 
     Calculator c4 = (a, b) -> a + b + 100;
     System.out.println(c4.sumTwoNumber(1, 2));
+
+
 
 
   }
