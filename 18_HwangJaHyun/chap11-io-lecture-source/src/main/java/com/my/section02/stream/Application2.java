@@ -1,4 +1,4 @@
-package com.ohgiraffers.section02.stream;
+package com.my.section02.stream;
 
 import java.io.FileReader;
 import java.io.IOException;

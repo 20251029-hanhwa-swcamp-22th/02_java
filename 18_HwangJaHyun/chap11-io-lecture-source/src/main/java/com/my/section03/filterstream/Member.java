@@ -1,4 +1,4 @@
-package com.ohgiraffers.section03.filterstream;
+package com.my.section03.filterstream;
 
 /* java.io.Serializable 마커 인터페이스
 * - 직렬화의 대상임을 명시하는 인터페이스
