@@ -28,7 +28,7 @@ public class Application1 {
 
     Calculator c4 = (a, b) -> a + b + 100;
     System.out.println(c4.sumTwoNumber(1,2));
-    PriorityQueue
+
 
   }
 }
