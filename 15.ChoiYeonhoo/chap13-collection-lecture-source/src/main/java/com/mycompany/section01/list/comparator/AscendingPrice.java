@@ -11,7 +11,7 @@ public class AscendingPrice implements Comparator<BookDTO> {
   // 결과가 양수 X -> 앞으로
   @Override
   public int compare(BookDTO o1, BookDTO o2) {
-//    return o1.getPrice() - o2.getPrice(); // 오름차순
-    return o2.getPrice() - o1.getPrice(); // 내림차순
+    return o1.getPrice() - o2.getPrice(); // 오름차순
+    //return o2.getPrice() - o1.getPrice(); // 내림차순
   }
 }

@@ -13,6 +13,8 @@ public class Applicaiton1 {
     * - 입/출력 횟수를 줄여서 성능을 향상 시킴
     * */
 
+    // BufferedWriter 인스턴스 bw는 보조 스트림 역할을 하고 단독으로 파일과 연결될 수 없기 때문에, 파일 시스템과 실제 연결하는
+    // 기반 스트림인 FileWriter의 새로운 인스턴스를 생성하여 생성자를 통해 제공한다.
     try(BufferedWriter bw = new BufferedWriter(new FileWriter("testbuffered.txt"))){
 
       bw.write("안녕하세요.\n");
@@ -39,6 +41,7 @@ public class Applicaiton1 {
       System.out.println("==== 파일 내용 읽어오기 ====");
 
       String str;
+      // 문자열을 읽었을때 null값이 아니라면 str을 출력하겠다
       while( (str = br.readLine()) != null ){
         System.out.println(str);
       }
