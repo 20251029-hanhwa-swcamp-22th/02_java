@@ -16,6 +16,7 @@ public class Application1 {
 
 
             @Override
+            ///  CalculatorImpl 에 있는거와 같음 (익명 내부 클래스)
             public int sumTwoNumber(int a, int b) {
                 return a + b;
             }
@@ -23,20 +24,23 @@ public class Application1 {
 
         System.out.println(c2.sumTwoNumber(20, 30));
 
-        /* 3. 익명 내부 클래스 방식을 람다식으로 바꿔서 사용하는 방법 */
+        /* 3. 익명 내부 클래스 방식을 람다식(함수를 간단하게 만드는 식)으로 바꿔서 사용하는 방법 */
 
-        /*        Calculator c3 = new Calculator() {
-            @Override
-            public int sumTwoNumber
-            (int a, int b)
-            {return 0;}
+        /*
+             Calculator c3 = new Calculator() {
+                @Override
+                public int sumTwoNumber
+               (int a, int b)
+               {return 0;
+               }
+
         };*/
-// 위 코드를 이렇게 줄여서 만듬
+        // 위 코드를 이렇게 줄여서 만듬
         Calculator c3 = (a, b) -> a + b;
         System.out.println(c3.sumTwoNumber(40, 50));
 
         Calculator c4 = (a, b) -> a + b + 100;
-        System.out.println(c4.sumTwoNumber(1,2));
+        System.out.println(c4.sumTwoNumber(1, 2));
 
 
     }
