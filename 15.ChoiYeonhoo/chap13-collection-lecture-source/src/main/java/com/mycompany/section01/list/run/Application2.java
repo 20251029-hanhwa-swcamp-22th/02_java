@@ -36,7 +36,7 @@ public class Application2 {
     double avg = (double)sum / bookList.size();
     System.out.println("avg = " + avg);
 
-    System.out.println("===== 기본 오름 차순 정렬 ====="); // BookDTD에 CompareTo 에 override 된 것이 기본이 됨
+    System.out.println("===== 기본 오름 차순 정렬 ====="); // BookDTD 클래스에 CompareTo를 override한 것이 기본이 됨
 
     Collections.sort(bookList);
     for (BookDTO book : bookList) {
