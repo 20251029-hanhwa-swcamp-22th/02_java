@@ -28,7 +28,7 @@ public class ConstructorReference {
     }
     System.out.println(people);
 
-    Person[] pArray =people.stream().map(name -> new Person(name, 0)).toArray(Person[]::new);
+    Person[] pArray = people.stream().map(name -> new Person(name, 0)).toArray(Person[]::new);
     System.out.println("Arrays.toString(pArray) = " + Arrays.toString(pArray));
   }
 }
