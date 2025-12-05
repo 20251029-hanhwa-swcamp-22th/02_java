@@ -14,5 +14,6 @@ public class Application {
 
         System.out.println(StaticTest.MAX_FINAL);
         System.out.println(StaticTest.MIN_FINAL);
+
     }
 }
