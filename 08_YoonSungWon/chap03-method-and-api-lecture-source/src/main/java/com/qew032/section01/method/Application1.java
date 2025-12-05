@@ -10,12 +10,12 @@ public class Application1 {
 
     /* 별도로 선언한 메서드를 호출한다. */
     Application1 application1 = new Application1();
-    application1.methodA();;
-    application1.methodB();;
-    application1.methodC();;
+    application1.methodA();
+    application1.methodB();
+    application1.methodC();
 
-    application1.methodA();;
-    application1.methodA();;
+    application1.methodA();
+    application1.methodA();
 
     System.out.println("main() 메서드 종료");
   }   // main 끝나는 부분

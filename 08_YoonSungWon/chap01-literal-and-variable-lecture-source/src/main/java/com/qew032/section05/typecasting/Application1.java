@@ -13,6 +13,7 @@ public class Application1 {
 
     int inum1 = 10;
     long lnum1 = inum1;
+      System.out.println("lnum1 = " + lnum1);
 
     int inum2 = 20;
     long lnum2 = 100L;

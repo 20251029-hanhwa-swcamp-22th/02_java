@@ -8,9 +8,9 @@ public class Application3 {
     // 전달 인자의 타입은 반드시 호출하려는 메서드의 매개변수  타입과 같아야 한다.
     // 전달 인자의 순서는 반드시 호출하려는 메서드의 매개변수 순서와 같아야 한다.
     Application3 application3 = new Application3();
-    application3.printAge(34);;
-    application3.printAge(45);;
-    application3.printAge(10000);;
+    application3.printAge(34);
+    application3.printAge(45);
+    application3.printAge(10000);
 
     application3.introduce("윤성원", 34, '남');
     application3.introduce("유리", 5, '여');
