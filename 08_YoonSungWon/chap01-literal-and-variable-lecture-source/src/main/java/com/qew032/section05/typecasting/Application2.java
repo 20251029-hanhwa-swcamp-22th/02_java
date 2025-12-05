@@ -30,7 +30,7 @@ public class Application2 {
 
     /* 정수 연산 시 데이터 손실 */
     int inum3 = 317;
-    byte bnum3 = (byte)inum3;;
+    byte bnum3 = (byte)inum3;
     System.out.println("bnum3 = " + bnum3);
 
     //    System.out.println(Integer.toBinaryString(inum3));
@@ -40,7 +40,7 @@ public class Application2 {
     double dnum4 = 123.456782498;
     System.out.println((int)dnum4);
 
-    /* 숫자 -> 뭄자 */
+    /* 숫자 -> 문자 */
     int inum5 = 99;
     char ch5 = (char)inum5;
     System.out.println("ch5 = " + ch5);
