@@ -1,4 +1,4 @@
-#jdbc driver
+``#jdbc driver
 #Tue Dec 02 15:14:23 KST 2025
 password=pwd1234
 driver=oracle.jdbc.driver.OracleDriver

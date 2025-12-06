@@ -24,7 +24,7 @@ char[] carr = 문자열변수.toCharArray(); 와 같이 사용)
         System.out.println("검색할 문자를 입력하세요 : ");
         char searchChar = sc.nextLine().charAt(0);
 
-        // String -> char[]
+        // String -> char []
         char[] carr = input.toCharArray();
         int charCount = 0; // 세기 위한 변수
 
