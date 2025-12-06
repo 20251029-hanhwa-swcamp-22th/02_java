@@ -22,16 +22,16 @@ public class ClassAndObject1 {
 
             sc.nextLine();
 
-            System.out.print("이름");
+            System.out.print("이름 ");
             String name = sc.nextLine();
 
-            System.out.print("국어점수");
+            System.out.print("국어점수 ");
             int kor = sc.nextInt();
 
-            System.out.print("영어점수");
+            System.out.print("영어점수 ");
             int eng = sc.nextInt();
 
-            System.out.print("수학점수");
+            System.out.print("수학점수 ");
             int math = sc.nextInt();
 
             sc.nextLine();
