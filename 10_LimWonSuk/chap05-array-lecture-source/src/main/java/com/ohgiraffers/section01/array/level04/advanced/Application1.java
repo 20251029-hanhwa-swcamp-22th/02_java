@@ -23,7 +23,7 @@
                  for (int j = 0; j < i; j++) {
                      if (lotto[j] == lotto[i]) // 이미 저장된 난수 == 새로 저장된 난수
                      {
-                         ㅑ--;
+                         
                          break;
                      }
 

@@ -1,12 +1,21 @@
 package com.ohgiraffers.section01.method;
 
 public class Homework
-{
-    public static void main()
-    {
-        Calculator calculator = new Calculator();
-        System.out.println("calculator = " + calculator);
-
-        int sumResult = calculator.sum 1to10();
-    }
+{ public void Method(){
+    System.out.println("메서드 확인");
 }
+public int sum10(){
+    int sum = 0;
+    for (int i = 0; i < 10; i++) {
+        sum = i;
+    }
+    return sum;
+}
+public int PlusMethod(int a, int b){
+    return a + b;
+}
+public int MinusMethod(int a, int b){
+    return a - b;
+}
+}
+

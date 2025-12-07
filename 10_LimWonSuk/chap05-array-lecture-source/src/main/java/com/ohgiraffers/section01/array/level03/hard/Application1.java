@@ -65,7 +65,7 @@
 
             }*/
 
-            //전체 출력
+            // 전체 출력
             for (int num : iarr) {
                 System.out.print(num + "  ");
             }
