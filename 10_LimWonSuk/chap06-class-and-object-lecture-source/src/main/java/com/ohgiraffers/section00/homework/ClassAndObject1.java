@@ -22,16 +22,16 @@ public class ClassAndObject1 {
 
             sc.nextLine();
 
-            System.out.print("이름 ");
+            System.out.print(" 이름 ");
             String name = sc.nextLine();
 
-            System.out.print("국어점수 ");
+            System.out.print(" 국어점수 ");
             int kor = sc.nextInt();
 
-            System.out.print("영어점수 ");
+            System.out.print(" 영어점수 ");
             int eng = sc.nextInt();
 
-            System.out.print("수학점수 ");
+            System.out.print(" 수학점수 ");
             int math = sc.nextInt();
 
             sc.nextLine();
@@ -41,7 +41,7 @@ public class ClassAndObject1 {
             count++;
 
 
-            System.out.print("계속추가할거면 y 아니면 n (y/n) : ");
+            System.out.print(" 계속추가할거면 y 아니면 n (y/n) : ");
             String answer = sc.nextLine();
 
             if (!answer.equalsIgnoreCase("y")) {
@@ -50,7 +50,7 @@ public class ClassAndObject1 {
 
             System.out.println();
         }
-        System.out.println("=====학생 정보 =====");
+        System.out.println("===== 학생 정보 =====");
 
         for (int i = 0; i < count; i++) {
             System.out.println(students[i].Information());
