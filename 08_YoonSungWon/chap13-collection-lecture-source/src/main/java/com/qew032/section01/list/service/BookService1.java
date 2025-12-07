@@ -10,7 +10,6 @@ import com.qew032.section01.list.dto.BookDTO;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -23,13 +22,13 @@ import java.util.stream.Collectors;
  *  책 추가 | 수정 | 삭제 | 검색 | 정렬 | 파일 저장까지 모든 기능 담당
  * **************************************************************************************/
 
-public class BookService {
+public class BookService1 {
 
     private List<BookDTO> bookList;                                                                                     //  책 목록을 저장하는 리스트(책 여러 권을 저장하는 책장 역할)
 
     private static final String FILE_PATH = "books.dat";                                                                //  상수) 책 정보를 파일로 저장할 경로
 
-    public BookService() {                                                                                              //  BookService 기본 생성자
+    public BookService1() {                                                                                              //  BookService 기본 생성자
 
         bookList = new ArrayList<>();                                                                                   //  1. 빈 리스트 준비
 
@@ -82,11 +81,11 @@ public class BookService {
         return bookList;
     }
 
-    /** 조회 *********************************************
-     *  책 목록에서 번호(number)가 일치하는 책을 찾아서 반환
+    /**
+     * 책 목록에서 번호(number)가 일치하는 책을 찾아서 반환
      *
-     *  @param bookNumber 찾고자 하는 책의 번호
-     *  @return BookDTO 또는 null
+     * @param bookNumber 찾고자 하는 책의 번호
+     * @return BookDTO 또는 null
      */
     public BookDTO selectBookNumber(int bookNumber) {
 
@@ -96,42 +95,40 @@ public class BookService {
         }
 
         return null; // 번호가 일치하는 책이 없음
-
     }
 
 
-    /** 생성 *********************************************
+    /**
      * 책 목록에 새로운 책 추가
      * 단, "제목"이 중복되는 책은 추가 X
      * 반환되는 number는 마지막 number + 1
      *
-     * @param newBook 생성 할 책 객체
+     * @param newBook
      * @return number 또는 0
      */
     public int addBook(BookDTO newBook) {
 
-        if (isDuplicate(newBook.getTitle(), newBook.getAuthor())) {                                                     // 제목 + 저자가 완전히 같은 책이 이미 있다면 추가 불가
-            return 0; // 중복
+        // 중복 체크
+        for (BookDTO book : bookList) {
+            if (book.getTitle().equals(newBook.getTitle())) // 중복인 경우
+                return 0;
         }
 
-        int maxNum = bookList.stream()                                                                                  // 책 번호 자동 생성: 지금까지 나온 번호 중 가장 큰 번호 + 1
-                .mapToInt(BookDTO::getNumber)
-                .max()
-                .orElse(0);
+        // 다음 번호 생성
+        int nextNumber = bookList.isEmpty() ? 1 : bookList.get(bookList.size() - 1).getNumber() + 1;
 
-        newBook.setNumber(maxNum + 1);                                                                                  // 생성 번호 새로운 책 정보에 적용
+        // 책 정보를 목록에 추가
+        newBook.setNumber(nextNumber);
         bookList.add(newBook);
-
-        saveToFile();                                                                                                    // 저장
 
         return newBook.getNumber(); // 생성된 책 번호 반환
 
     }
 
-    /** 제거 *********************************************
+    /**
      * 도서 목록에서 번호가 일치하는 책 제거
      *
-     * @param bookNumber 제거 하고자 하는 책의 번호
+     * @param bookNumber
      * @return 제거된 BookDTO 또는 null
      */
     public BookDTO deleteBook(int bookNumber) {
@@ -155,61 +152,35 @@ public class BookService {
      * @return searchBookList
      */
     public List<BookDTO> searchBook(String keyword) {
-
         List<BookDTO> searchBookList = new ArrayList<>();
 
         for (BookDTO book : bookList) {
-            if (book.getTitle().contains(keyword)) {                                                                    // 제목에 keyword가 포함되어 있으면 true
-                searchBookList.add(book);                                                                               // 검색된 책 목록에 keyword 포함 책 추가
+            // 제목에 keyword가 포함되어 있으면 true
+            if (book.getTitle().contains(keyword)) {
+                searchBookList.add(book); // 검색된 책 목록에 keyword 포함 책 추가
             }
         }
 
         return searchBookList;
     }
 
-    /* 가격 범위로 책 찾기 */
-    public List<BookDTO> findByPriceRange(int min, int max) {
-        return bookList.stream()
-                .filter(b -> b.getPrice() >= min && b.getPrice() <= max)
-                .collect(Collectors.toList());
-    }
-
-    public int getTotalPrice() {
-        return bookList.stream().mapToInt(BookDTO::getPrice).sum();
-    }
-
-    public double getAveragePrice() {
-        return bookList.stream().mapToInt(BookDTO::getPrice).average().orElse(0);
-    }
-
-    public BookDTO getMaxPriceBook() {
-        return bookList.stream().max(Comparator.comparingInt(BookDTO::getPrice)).orElse(null);
-    }
-
-    public BookDTO getMinPriceBook() {
-        return bookList.stream().min(Comparator.comparingInt(BookDTO::getPrice)).orElse(null);
-    }
-
-    /* 중복 검사: 제목 + 저자가 모두 같으면 같은 책으로 간주 */
-    private boolean isDuplicate(String title, String author) {
-        return bookList.stream()
-                .anyMatch(b -> b.getTitle().equals(title) && b.getAuthor().equals(author));
-    }
 
     /**
-     *  List 복사본을 만들어서 정렬 후 반환
-     *  Collections.sort() -> 원본 정렬
+     * List 복사본을 만들어서 정렬 후 반환
      *
-     *  @param sortingNumber
-     *  @return sortedBookList
+     * @param sortingNumber
+     * @return sortedBookList
      */
     public List<BookDTO> sortBookList(int sortingNumber) {
 
-        List<BookDTO> sortedList = bookList.stream().map(BookDTO::new).collect(Collectors.toList());                    // 스트림을 이용한 List 깊은 복사
+        // Collections.sort() -> 원본 정렬
 
-        if (sortingNumber == 1) {                                                                                       // 이름 오름차순(기본 정렬)
+        // 스트림을 이용한 List 깊은 복사
+        List<BookDTO> sortedList = bookList.stream().map(BookDTO::new).collect(Collectors.toList());
+
+        if (sortingNumber == 1) { // 이름 오름차순(기본 정렬)
             Collections.sort(sortedList);
-        } else {                                                                                                        // 가격 오름차순(추가 정렬 기준)
+        } else { // 가격 오름차순(추가 정렬 기준)
             Collections.sort(sortedList, new AscendingPrice());
         }
 
