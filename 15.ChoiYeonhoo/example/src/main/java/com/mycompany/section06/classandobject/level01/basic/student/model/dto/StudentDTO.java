@@ -70,12 +70,13 @@ public class StudentDTO {
 
   public String getInformation() {
     return "StudentDTO{" +
-        "grade=" + grade +
-        ", classroom=" + classroom +
-        ", name='" + name + '\'' +
-        ", kor=" + kor +
-        ", eng=" + eng +
-        ", math=" + math +
+        "학 =" + grade +
+        ", 반=" + classroom +
+        ", 이름='" + name + '\'' +
+        ", 국어=" + kor +
+        ", 영어=" + eng +
+        ", 수학=" + math +
+        ", 평균=" + ((kor + eng + math) / 3) +
         '}';
   }
 }

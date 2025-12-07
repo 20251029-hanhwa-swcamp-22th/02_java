@@ -11,10 +11,11 @@ public class Application {
     // 해당 학생의 학년, 반, 이름, 국어, 수학, 영어 점수를 기록하고 평균을 구해보시오.
     // 해당 구현 클래스 다이어그램과 클래스 구조를 참고하여 프로젝트를 완성하시오.
 
-    StudentDTO[] student = new StudentDTO[10];
+    StudentDTO[] students = new StudentDTO[10];
     Scanner sc = new Scanner(System.in);
 
     int inputCount = 0;
+    char answer;
 
     do {
 
@@ -42,17 +43,21 @@ public class Application {
       sc.nextLine();
 
       // 학생 정보 array에 추가
-
+      students[inputCount] = new StudentDTO(grade, classroom, name, kor, eng, math);
+      inputCount++;
 
       System.out.print("계속 추가할 겁니까 ? (y/n) : ");
-      char str = sc.nextLine().charAt(0);
+      answer = sc.nextLine().charAt(0);
 
-      if (str == 'y') {
-        return;
-      } else break;
+      if (inputCount >= 3) break;
 
     }
-    while (inputCount < 3);
+    while (answer == 'y');
+
+    // 입력 끝나면 학생 정보 있는 만큼 프린트
+    for (int i = 0; i < inputCount; i++) {
+      System.out.println(students[i].getInformation());
+    }
 
 
   }

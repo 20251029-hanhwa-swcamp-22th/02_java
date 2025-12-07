@@ -106,7 +106,7 @@ public class Application {
     // 37개면 5개씩 하면 8개 필요
     // 35개면 7개
     // 전체 / 5 의 나머지가 0 이면 그대로, 나머지 있으면 + 1 페이지
-    int totalPage = ((bookTotalCount / bookPerPage) % bookPerPage == 0 ? (bookTotalCount / bookPerPage) : (bookTotalCount / bookPerPage) + 1);
+    int totalPage = (bookTotalCount % bookPerPage == 0 ? (bookTotalCount / bookPerPage) : (bookTotalCount / bookPerPage) + 1);
 
     int currentPage = 1; // 현재 페이지, 초기 페이지
 
