@@ -8,17 +8,20 @@ public class Application1 {
     System.out.print("문자열을 하나 입력하세요 : ");
     String input = sc.nextLine();
 
-    System.out.print("검색할 문자를 입력하세요 : ");
-    char searchChar = sc.nextLine().charAt(0);
-
     char[] carr = input.toCharArray();
 
-    int charcount = 0;
-    for(char ch : carr) {
-      if(ch == searchChar) charcount++;
+    System.out.print("검색할 문자를 입력하세요 : ");
+    char ch = sc.next().charAt(0);
+
+    int cnt = 0;
+    for(char c : carr) {
+      if(c == ch) {
+        ++cnt;
+      }
     }
 
-    //System.out.println("입력하신 문자열 %s에서 찾으시는 문자 %c은 %d개 입니다.", input, searchChar, charcount);
+    System.out.println("입력하신 문자열 "+input+"에서 찾으시는 문자 "+ch+"은(는) "+cnt+"개 입니다.");
+
   }
 
 
